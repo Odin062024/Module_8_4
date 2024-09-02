@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My first website</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        <h1>Witaj na mojej stronie domowej</h1>
+        <img src=https://live.staticflickr.com/5599/15430375227_d7285f8c0d_z.jpg style='height: 20%; width: 20%; object-fit: contain' alt="Albert" title="Einstein">
+    {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        Made by Viking
+        {% endblock %}
+    </div>
+</body>
+</html>
